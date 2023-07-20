@@ -34,7 +34,7 @@ const Offer = () => {
           </div>
           <div className="offerright">
             <div className="offerrighthaut">
-              <div className="offerprice">{offer.product_price}</div>
+              <div className="offerprice">{offer.product_price} €</div>
               <div className="offerlist">
                 <li>
                   <span>Marque</span>
