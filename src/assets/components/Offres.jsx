@@ -9,7 +9,7 @@ function Offres() {
 
   useEffect(() => {
     axios
-      .get("https://lereacteur-vinted-api.herokuapp.com/offers")
+      .get("https://site--vinted--54hcj7vln9rf.code.run/offers")
       .then((response) => {
         setOffres(response.data.offers);
         setIsLoading(false);
