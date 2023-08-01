@@ -31,7 +31,17 @@
 .heroclass {
   position: relative;
 }
-
+.search {
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  width: 80%;
+  height: 2vh;
+}
+.searchform {
+  display: flex;
+}
 .herobox {
   display: flex;
   position: absolute;
@@ -164,6 +174,10 @@
   align-items: center;
   display: flex;
 }
+.bouttonshead {
+  display: flex;
+  gap: 20px;
+}
 .offerrightbas button {
   background: #09b1ba;
   border: 1px solid #09b1ba;
@@ -177,22 +191,22 @@
   width: 100%;
 }
 .buttonheadwhite {
-  border: 1px solid #2cb1ba;
+  border: 1px solid #09aeb7;
+  background-color: white;
   border-radius: 5px;
-  font-family: Maison Neue;
-  font-size: 12px;
-  height: 30px;
-  outline: none;
-  width: 115px;
+  color: #09aeb7;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 .buttonheadblue {
-  border: 1px solid #2cb1ba;
+  background-color: #09aeb7;
+  color: white;
+  border: 1px solid #09aeb7;
   border-radius: 5px;
-  font-family: Maison Neue;
-  font-size: 12px;
-  height: 30px;
-  outline: none;
-  width: 115px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 .disconnect {
   background-color: #c2175b;
@@ -223,4 +237,108 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.paymentform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  padding-top: 50px;
+}
+.resume {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #adadad;
+}
+.paymentbg {
+  background-color: #f5f6f7;
+  height: 100vh;
+  width: 100%;
+}
+.cartasse {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+  margin-bottom: 10px;
+  color: #adadad;
+  border: solid 1px #09aeb7;
+}
+.submitos {
+  cursor: pointer;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #09aeb7;
+}
+.paiementok {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.publishmain {
+  background-color: #f5f6f7;
+  height: 100vh;
+}
+.publish {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 14px;
+  padding-top: 50px;
+}
+.publish div {
+  background-color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.publish input {
+  width: 300px;
+  font-size: 12px;
+  margin-left: 40%;
+  border: none;
+  border-bottom: 1.8px solid #f5f6f7;
+}
+.publish textarea {
+  height: 15vh;
+  margin-left: 0;
+  font-size: 12px;
+  margin-left: 40%;
+  border: none;
+  border-bottom: 1.8px solid #f5f6f7;
+  width: 300px;
+}
+.publieroffre {
+  background-color: #09aeb7;
+
+  color: #fff;
+
+  border: 1px solid #09aeb7;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin: 30px auto 0;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

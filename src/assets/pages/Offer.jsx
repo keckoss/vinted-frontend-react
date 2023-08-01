@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 const Offer = () => {
   const { id } = useParams();
-  const [offer, setOffer] = useState(false);
+  const [offer, setOffer] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    navigate("/payment", {
+      state: {
+        title: offer.product_name,
+        price: offer.product_price * 100,
+        curency: "eur",
+      },
+    });
+  };
 
   useEffect(() => {
     axios
@@ -12,6 +25,7 @@ const Offer = () => {
       .then((response) => {
         const selectedOffer = response.data;
         setOffer(selectedOffer);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Une erreur s'est produite :", error);
@@ -27,10 +41,7 @@ const Offer = () => {
       <div className="container">
         <div className="offergenerale">
           <div className="offerleft">
-            <img
-              src={offer.product_image.secure_url}
-              alt={offer.product_name}
-            />
+            <img src={offer.product_image.url} alt={offer.product_name} />
           </div>
           <div className="offerright">
             <div className="offerrighthaut">
@@ -61,12 +72,16 @@ const Offer = () => {
               <div className="avatarusername">
                 <img
                   className="avatar"
-                  src={offer.owner.account.avatar.secure_url}
+                  src={
+                    offer?.owner?.account?.avatar?.secure_url ||
+                    "url_de_secours_si_secure_url_est_indefini"
+                  }
                   alt="avatar"
                 />
+
                 {offer.owner.account.username}
               </div>
-              <button>acheter</button>
+              <button onClick={handleSubmit}>Acheter</button>
             </div>
           </div>
         </div>

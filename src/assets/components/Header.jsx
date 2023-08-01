@@ -30,9 +30,14 @@ function Header() {
             </Link>
           </div>
 
-          <div className="search">
-            <form action="/search" method="get">
-              <input type="text" name="search" placeholder="Rechercher..." />
+          <div>
+            <form action="/search" method="get" className="searchform">
+              <input
+                type="text"
+                name="search"
+                placeholder="Rechercher..."
+                className="search"
+              />
               <button type="submit">Rechercher</button>
             </form>
           </div>
@@ -51,7 +56,9 @@ function Header() {
                 </Link>
               </>
             )}
-            <button className="buttonheadblue">vends tes articles</button>
+            <Link to="/publish">
+              <button className="buttonheadblue">vends tes articles</button>
+            </Link>
           </div>
         </div>
       </div>

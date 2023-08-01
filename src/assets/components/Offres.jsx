@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Loading from "../images/Loading_icon.gif";
 
 function Offres() {
   const [offres, setOffres] = useState([]);
@@ -22,7 +23,7 @@ function Offres() {
   return (
     <div className="container">
       {isLoading ? (
-        <p>Chargement...</p>
+        <img className="loading" src={Loading} alt="loading" />
       ) : (
         <div className="toutproduit">
           {offres.map((offre) => (
@@ -35,7 +36,10 @@ function Offres() {
               <h3 className="titreproduit">{offre.owner.account.username}</h3>
               <div className="subproduct">
                 <div className="offimg">
-                  <img src={offre.product_image.url} alt={offre.product_name} />
+                  <img
+                    src={offre.product_image.secure_url}
+                    alt={offre.product_name}
+                  />
                 </div>
                 <div className="productbas">
                   <p>{offre.product_price}</p>

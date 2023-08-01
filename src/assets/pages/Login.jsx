@@ -55,7 +55,7 @@ const Login = () => {
 
   if (isLoggedIn) {
     return (
-      <div>
+      <div className="paiementok">
         <h1>Connexion réussie</h1>
         <p>Vous êtes maintenant connecté.</p>
         <p>
