@@ -62,7 +62,7 @@ const CheckoutForm = () => {
 
     // Utilisez le titre et le prix dans votre requête Axios
     const response = await axios.post(
-      "https://site--vinted--54hcj7vln9rf.code.run/pay",
+      "https://lereacteur-vinted-api.herokuapp.com/payment",
       {
         token: stripeToken,
         title, // Incluez le titre dans la requête
